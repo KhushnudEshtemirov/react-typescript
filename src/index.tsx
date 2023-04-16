@@ -1,11 +1,14 @@
-import ReactDOM from "react-dom";
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
 
-const App = () => {
-  return (
-    <div>
-      <h1>Hi there!</h1>
-    </div>
-  );
-};
+import EventComponent from "./events/EventComponent";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
+  <StrictMode>
+    <EventComponent />
+  </StrictMode>
+);
